@@ -1,9 +1,9 @@
 
 Name: app-suva
 Epoch: 1
-Version: 1.0.10
+Version: 1.1.0
 Release: 1%{dist}
-Summary: Suva - APIs and install
+Summary: Suva - Core
 License: Proprietary
 Group: ClearOS/Libraries
 Source: app-suva-%{version}.tar.gz
@@ -13,7 +13,7 @@ Buildarch: noarch
 Suva provides tunnel and encryption services to ClearCenter portal
 
 %package core
-Summary: Suva - APIs and install
+Summary: Suva - Core
 Requires: app-base-core
 Requires: suva-client
 
@@ -31,6 +31,11 @@ mkdir -p -m 755 %{buildroot}/usr/clearos/apps/suva
 cp -r * %{buildroot}/usr/clearos/apps/suva/
 
 install -d -m 0755 %{buildroot}/var/clearos/suva
+
+if [ -d %{buildroot}/usr/clearos/apps/suva/libraries_zendguard ]; then
+    rm -rf %{buildroot}/usr/clearos/apps/suva/libraries
+    mv %{buildroot}/usr/clearos/apps/suva/libraries_zendguard %{buildroot}/usr/clearos/apps/suva/libraries
+fi
 
 %post core
 logger -p local6.notice -t installer 'app-suva-core - installing'
