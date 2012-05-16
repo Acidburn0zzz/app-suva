@@ -112,6 +112,12 @@ class Suva extends Daemon
         $hostkey = $file->lookup_value("/^\s*<hostkey>/");
         $hostkey = preg_replace('/<\/hostkey>/', '', $hostkey);
 
+        // Reset a blank hostkey
+        if (preg_match('/^00000000000000000000000000000000/', $hostkey)) {
+            $this->reset_hostkey();
+            $hostkey = $this->get_hostkey();
+        }
+
         return $hostkey;
     }
 
