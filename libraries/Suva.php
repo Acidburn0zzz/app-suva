@@ -3,9 +3,9 @@
 /**
  * Suva server class.
  *
- * @category   Apps
- * @package    Suva
- * @subpackage Libraries
+ * @category   apps
+ * @package    suva
+ * @subpackage libraries
  * @author     ClearCenter <developer@clearcenter.com>
  * @copyright  2011 ClearCenter
  * @license    http://www.clearcenter.com/Company/terms.html ClearCenter license
@@ -63,9 +63,9 @@ clearos_load_library('base/Validation_Exception');
 /**
  * Suva server class.
  *
- * @category   Apps
- * @package    Suva
- * @subpackage Libraries
+ * @category   apps
+ * @package    suva
+ * @subpackage libraries
  * @author     ClearCenter <developer@clearcenter.com>
  * @copyright  2011 ClearCenter
  * @license    http://www.clearcenter.com/Company/terms.html ClearCenter license
