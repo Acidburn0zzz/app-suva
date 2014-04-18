@@ -32,11 +32,6 @@ cp -r * %{buildroot}/usr/clearos/apps/suva/
 
 install -d -m 0755 %{buildroot}/var/clearos/suva
 
-if [ -d %{buildroot}/usr/clearos/apps/suva/libraries_zendguard ]; then
-    rm -rf %{buildroot}/usr/clearos/apps/suva/libraries
-    mv %{buildroot}/usr/clearos/apps/suva/libraries_zendguard %{buildroot}/usr/clearos/apps/suva/libraries
-fi
-
 %post core
 logger -p local6.notice -t installer 'app-suva-core - installing'
 
@@ -59,7 +54,6 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/suva/packaging
-%exclude /usr/clearos/apps/suva/tests
 %dir /usr/clearos/apps/suva
 %dir /var/clearos/suva
 /usr/clearos/apps/suva/deploy
