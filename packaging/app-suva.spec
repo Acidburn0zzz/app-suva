@@ -1,7 +1,7 @@
 
 Name: app-suva
 Epoch: 1
-Version: 1.2.2
+Version: 1.6.5
 Release: 1%{dist}
 Summary: Suva - Core
 License: Proprietary
