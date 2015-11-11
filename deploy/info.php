@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'suva';
-$app['version'] = '2.1.6';
+$app['version'] = '2.1.7';
 $app['release'] = '1';
 $app['vendor'] = 'ClearCenter';
 $app['packager'] = 'ClearCenter';
@@ -30,6 +30,10 @@ $app['core_only'] = TRUE;
 
 $app['core_requires'] = array(
     'suva-client',
+);
+
+$app['core_file_manifest'] = array(
+    'suva.php'=> array('target' => '/var/clearos/base/daemon/suva.php')
 );
 
 $app['core_directory_manifest'] = array(

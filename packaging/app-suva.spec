@@ -1,7 +1,7 @@
 
 Name: app-suva
 Epoch: 1
-Version: 2.1.6
+Version: 2.1.7
 Release: 1%{dist}
 Summary: Suva - Core
 License: Proprietary
@@ -31,6 +31,7 @@ mkdir -p -m 755 %{buildroot}/usr/clearos/apps/suva
 cp -r * %{buildroot}/usr/clearos/apps/suva/
 
 install -d -m 0755 %{buildroot}/var/clearos/suva
+install -D -m 0644 packaging/suva.php %{buildroot}/var/clearos/base/daemon/suva.php
 
 %post core
 logger -p local6.notice -t installer 'app-suva-core - installing'
@@ -59,3 +60,4 @@ exit 0
 /usr/clearos/apps/suva/deploy
 /usr/clearos/apps/suva/language
 /usr/clearos/apps/suva/libraries
+/var/clearos/base/daemon/suva.php
