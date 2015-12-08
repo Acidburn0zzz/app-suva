@@ -22,6 +22,6 @@ $configlet = array(
 	'package' => 'suva-client',
 	'process_name' => 'suvad',
 	'pid_file' => '/var/run/suvad/suvad.pid',
-	'reloadable' => TRUE,
+	'reloadable' => FALSE,
 	'url' => '/app/base'
 );
