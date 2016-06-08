@@ -94,9 +94,7 @@ class Suva extends Daemon
     {
         clearos_profile(__METHOD__, __LINE__);
 
-        $daemon = (clearos_version() == 6) ? 'suvad' :  'suva';
-
-        parent::__construct($daemon);
+        parent::__construct('suvad');
     }
 
     /**
