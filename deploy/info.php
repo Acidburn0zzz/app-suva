@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'suva';
-$app['version'] = '2.1.9';
+$app['version'] = '2.2.0';
 $app['release'] = '1';
 $app['vendor'] = 'ClearCenter';
 $app['packager'] = 'ClearCenter';
@@ -33,7 +33,7 @@ $app['core_requires'] = array(
 );
 
 $app['core_file_manifest'] = array(
-    'suva.php'=> array('target' => '/var/clearos/base/daemon/suva.php')
+    'suvad.php'=> array('target' => '/var/clearos/base/daemon/suvad.php')
 );
 
 $app['core_directory_manifest'] = array(
