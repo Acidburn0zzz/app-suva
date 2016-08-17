@@ -178,6 +178,26 @@ class Suva extends Daemon
         $this->reset();
     }
 
+    /**
+     * Sets Hostkey.
+     *
+     * @param string $hostkey hostkey
+     *
+     * @return void
+     * @throws Engine_Exception, Validation_Exception
+     */
+
+    public function set_hostkey($hostkey)
+    {
+        clearos_profile(__METHOD__, __LINE__);
+
+        Validation_Exception::is_valid($this->validate_hostkey($hostkey));
+
+        $file = new File(self::FILE_CONFIG, TRUE);
+        $file->replace_lines("/<hostkey>.*<\/hostkey>/", "\t<hostkey>$hostkey</hostkey>\n");
+        $this->reset();
+    }
+
     ///////////////////////////////////////////////////////////////////////////////
     // V A L I D A T I O N
     ///////////////////////////////////////////////////////////////////////////////
@@ -196,5 +216,21 @@ class Suva extends Daemon
 
         if (!preg_match("/^[0-9]+$/", $device_name)) 
             return lang('suva_device_name_invalid');
+    }
+
+    /**
+     * Validation for hostkey.
+     *
+     * @param string $hostkey hostkey
+     *
+     * @return error message if hostkey is invalid
+     */
+
+    public function validate_hostkey($hostkey)
+    {
+        clearos_profile(__METHOD__, __LINE__);
+
+        if (!preg_match("/^[a-f0-9]{32}$/i", $hostkey))
+            return lang('suva_hostkey_invalid');
     }
 }
