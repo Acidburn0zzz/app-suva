@@ -29,7 +29,7 @@ $app['menu_enabled'] = FALSE;
 $app['core_only'] = TRUE;
 
 $app['core_requires'] = array(
-    'suva-client',
+    'suva-client=> 3.1.17',
 );
 
 $app['core_file_manifest'] = array(

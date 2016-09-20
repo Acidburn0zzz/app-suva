@@ -15,7 +15,7 @@ Suva provides tunnel and encryption services to ClearCenter portal
 %package core
 Summary: Suva - Core
 Requires: app-base-core
-Requires: suva-client
+Requires: suva-client=> 3.1.17
 
 %description core
 Suva provides tunnel and encryption services to ClearCenter portal
