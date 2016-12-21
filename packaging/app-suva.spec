@@ -1,7 +1,7 @@
 
 Name: app-suva
 Epoch: 1
-Version: 2.3.0
+Version: 2.3.1
 Release: 1%{dist}
 Summary: Suva - Core
 License: Proprietary
@@ -15,7 +15,7 @@ Suva provides tunnel and encryption services to ClearCenter portal
 %package core
 Summary: Suva - Core
 Requires: app-base-core
-Requires: suva-client=> 3.1.17
+Requires: suva-client => 3.1.17
 Requires: app-events-core >= 1:2.3.0
 
 %description core

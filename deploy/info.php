@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'suva';
-$app['version'] = '2.3.0';
+$app['version'] = '2.3.1';
 $app['release'] = '1';
 $app['vendor'] = 'ClearCenter';
 $app['packager'] = 'ClearCenter';
@@ -29,7 +29,7 @@ $app['menu_enabled'] = FALSE;
 $app['core_only'] = TRUE;
 
 $app['core_requires'] = array(
-    'suva-client=> 3.1.17',
+    'suva-client => 3.1.17',
     'app-events-core >= 1:2.3.0',
 );
 
