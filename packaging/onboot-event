@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Create key
+#-----------
+
+/usr/bin/mkhost.sh /etc/suvad.conf

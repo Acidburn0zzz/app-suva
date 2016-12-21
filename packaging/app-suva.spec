@@ -1,7 +1,7 @@
 
 Name: app-suva
 Epoch: 1
-Version: 2.2.1
+Version: 2.3.0
 Release: 1%{dist}
 Summary: Suva - Core
 License: Proprietary
@@ -16,6 +16,7 @@ Suva provides tunnel and encryption services to ClearCenter portal
 Summary: Suva - Core
 Requires: app-base-core
 Requires: suva-client=> 3.1.17
+Requires: app-events-core >= 1:2.3.0
 
 %description core
 Suva provides tunnel and encryption services to ClearCenter portal
@@ -31,6 +32,7 @@ mkdir -p -m 755 %{buildroot}/usr/clearos/apps/suva
 cp -r * %{buildroot}/usr/clearos/apps/suva/
 
 install -d -m 0755 %{buildroot}/var/clearos/suva
+install -D -m 0755 packaging/onboot-event %{buildroot}/var/clearos/events/onboot/suva
 install -D -m 0644 packaging/suvad.php %{buildroot}/var/clearos/base/daemon/suvad.php
 
 %post core
@@ -60,4 +62,5 @@ exit 0
 /usr/clearos/apps/suva/deploy
 /usr/clearos/apps/suva/language
 /usr/clearos/apps/suva/libraries
+/var/clearos/events/onboot/suva
 /var/clearos/base/daemon/suvad.php

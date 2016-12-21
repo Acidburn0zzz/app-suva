@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'suva';
-$app['version'] = '2.2.1';
+$app['version'] = '2.3.0';
 $app['release'] = '1';
 $app['vendor'] = 'ClearCenter';
 $app['packager'] = 'ClearCenter';
@@ -30,10 +30,15 @@ $app['core_only'] = TRUE;
 
 $app['core_requires'] = array(
     'suva-client=> 3.1.17',
+    'app-events-core >= 1:2.3.0',
 );
 
 $app['core_file_manifest'] = array(
-    'suvad.php'=> array('target' => '/var/clearos/base/daemon/suvad.php')
+    'suvad.php'=> array('target' => '/var/clearos/base/daemon/suvad.php'),
+    'onboot-event'=> array(
+        'target' => '/var/clearos/events/onboot/suva',
+        'mode' => '0755'
+    ),
 );
 
 $app['core_directory_manifest'] = array(

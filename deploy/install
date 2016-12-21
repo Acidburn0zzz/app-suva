@@ -4,8 +4,3 @@
 #---------------
 
 /usr/sbin/addsudo /usr/bin/mkhost.sh app-suva-core
- 
-# Create key
-#-----------
-
-/usr/bin/mkhost.sh /etc/suvad.conf
