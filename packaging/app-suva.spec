@@ -1,7 +1,7 @@
 
 Name: app-suva
 Epoch: 1
-Version: 2.3.2
+Version: 2.3.20
 Release: 1%{dist}
 Summary: Suva - Core
 License: Proprietary
@@ -57,6 +57,7 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/suva/packaging
+%exclude /usr/clearos/apps/suva/unify.json
 %dir /usr/clearos/apps/suva
 %dir /var/clearos/suva
 /usr/clearos/apps/suva/deploy
