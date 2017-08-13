@@ -4,7 +4,13 @@
 #-----------
 
 if [ ! -e /var/clearos/suva/key_generated ]; then
-    logger -p local6.notice -t installer "app-suva-core - generating hostkey"
-    /usr/bin/mkhost.sh /etc/suvad.conf
+    CHECK=`grep "<hostkey>00000000000000000000000000000000" /etc/suvad.conf 2>/dev/null`
+    if [ -n "$CHECK" ]; then
+        logger -p local6.notice -t installer "app-suva-core - generating hostkey"
+        /usr/bin/mkhost.sh /etc/suvad.conf
+    else
+        logger -p local6.notice -t installer "app-suva-core - hostkey already generated"
+    fi
+
     touch /var/clearos/suva/key_generated
 fi
