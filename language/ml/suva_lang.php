@@ -1,6 +1,6 @@
 <?php
 
-$lang['suva_app_description'] = 'Suva ൽ ClearCenter കവാടം തുരങ്കം എൻക്രിപ്ഷൻ സേവനങ്ങൾ നൽകുന്നു';
-$lang['suva_app_name'] = 'Suva ൽ';
-$lang['suva_device_name_invalid'] = 'ഉപകരണ പേര് അസാധുവാണ്.';
-$lang['suva_hostkey_invalid'] = 'Hostkey അസാധുവാണ്.';
+$lang['suva_app_description'] = 'ക്വസ്റ്റ് സെന്റർ പോർട്ടലിലേക്കുള്ള തുരങ്കവും എൻക്രിപ്ഷൻ സേവനങ്ങളും Suva നൽകുന്നു';
+$lang['suva_app_name'] = 'സുവാ';
+$lang['suva_device_name_invalid'] = 'ഉപകരണ നാമം അസാധുവാണ്.';
+$lang['suva_hostkey_invalid'] = 'ഹോസ്റ്റ്key അസാധുവാണ്.';
