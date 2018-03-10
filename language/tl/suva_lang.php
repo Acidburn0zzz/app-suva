@@ -1,6 +1,6 @@
 <?php
 
-$lang['suva_app_description'] = 'Suva nagbibigay tunnel at encryption serbisyo sa ClearCenter portal';
+$lang['suva_app_description'] = 'Nagbibigay ang Suva ng mga serbisyo ng tunel at pag-encrypt sa ClearCenter portal';
 $lang['suva_app_name'] = 'Suva';
-$lang['suva_device_name_invalid'] = 'Pangalan ng device ay hindi wasto.';
-$lang['suva_hostkey_invalid'] = 'Hostkey ay hindi wasto.';
+$lang['suva_device_name_invalid'] = 'Di-wasto ang pangalan ng device.';
+$lang['suva_hostkey_invalid'] = 'Di-wasto ang hostkey.';
