@@ -1,6 +1,6 @@
 <?php
 
-$lang['suva_app_description'] = 'Suva παρέχει υπηρεσίες τούνελ και την κρυπτογράφηση για να ClearCenter πύλης';
-$lang['suva_app_name'] = 'Σούβα';
-$lang['suva_device_name_invalid'] = 'όνομα της συσκευής δεν είναι έγκυρο.';
-$lang['suva_hostkey_invalid'] = 'Hostkey ψήφισμα δεν είναι έγκυρο.';
+$lang['suva_app_description'] = 'Η Suva παρέχει υπηρεσίες σήραγγας και κρυπτογράφησης στην πύλη ClearCenter';
+$lang['suva_app_name'] = 'Σουβά';
+$lang['suva_device_name_invalid'] = 'Το όνομα συσκευής δεν είναι έγκυρο.';
+$lang['suva_hostkey_invalid'] = 'Το Hostkey δεν είναι έγκυρο.';
